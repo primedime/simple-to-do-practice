@@ -12,19 +12,17 @@ class App extends Component {
     };
   }
 
-  onChange = (event) => {
+  onChange = event => {
     this.setState({ term: event.target.value });
-  }
+  };
 
-  onSubmit = (event) => {
-    event.preventDefault()
+  onSubmit = event => {
+    event.preventDefault();
     this.setState({
       term: '',
       items: [...this.state.items, this.state.term]
     });
-  }
-
-
+  };
 
   render() {
     return (
@@ -34,11 +32,9 @@ class App extends Component {
           <button>Submit</button>
         </form>
         <List items={this.state.items} />
-        
       </div>
     );
   }
-
 }
 
 export default App;
